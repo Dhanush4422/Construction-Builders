@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Builder</title>
+
+
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/page-header.css">
+  <link rel="stylesheet" href="../css/Services.css">
+  <link rel="stylesheet" href="../css/enquiry.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css//banner.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <script src="../js/main.js" defer></script>
+</head>
+
+<body>
+
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="/images/logo/BUILDER2.jpg" alt="builder">
+    </div>
+    <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="dropdown-container">
+        <div class="dropdown">
+          <a href="services.html" class="dropbtn">Services <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-content">
+            <a href="#">Turnkey House Construction</a>
+            <a href="#">Commercial Construction</a>
+            <a href="#">Architectural Designing</a>
+            <a href="#">Structural Designing</a>
+            <a href="#">Building Plan Approval</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="projects.html">Project</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+
+
+    <section class="page-header-banner">
+      <div class="header-overlay"></div>
+      <div class="header-content">
+        <h1>Services</h1>
+        <div class="breadcrumb">
+          <a href="../index.html">HOME</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Services</span>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section class="services-list-section">
+      <div class="about-container">
+        <h2 class="section-subtitle wow animate__fadeIn" data-wow-duration="2s">Our Key Services</h2>
+        <hr class="subtitle-underline wow animate__zoomIn" data-wow-duration="2s" data-wow-delay="0.3s">
+        <p class="section-description wow animate__fadeIn" data-wow-duration="2s" data-wow-delay="0.5s">
+          We provide a complete range of construction and architectural solutions to meet your needs.
+        </p>
+
+        <div class="services-grid">
+
+          <div class="service-item-list wow animate__fadeInUp" data-wow-duration="2.0s" data-wow-delay="0.7s">
+            <i class="fas fa-house-chimney"></i>
+            <h3>Turnkey House Construction</h3>
+            <p>From blueprint to handover, we manage every detail, providing a single point of contact for a
+              stress-free experience.</p>
+            <a href="#" class="service-read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-item-list wow animate__fadeInUp" data-wow-duration="2.0s" data-wow-delay="0.9s">
+            <i class="fas fa-city"></i>
+            <h3>Commercial Construction</h3>
+            <p>Building high-quality, sustainable commercial spaces, including offices, retail centers, and
+              industrial facilities.</p>
+            <a href="#" class="service-read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-item-list wow animate__fadeInUp" data-wow-duration="2.0s" data-wow-delay="1.1s">
+            <i class="fas fa-drafting-compass"></i>
+            <h3>Architectural Designing</h3>
+            <p>Innovative and compliant designs that maximize space, efficiency, and aesthetic appeal for
+              modern living.</p>
+            <a href="#" class="service-read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-item-list wow animate__fadeInUp" data-wow-duration="2.0s" data-wow-delay="1.3s">
+            <i class="fas fa-trowel-bricks"></i>
+            <h3>Structural Designing</h3>
+            <p>Expert structural planning ensuring the safety, stability, and longevity of your building
+              with modern materials.</p>
+            <a href="#" class="service-read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-item-list wow animate__fadeInUp" data-wow-duration="2.0s" data-wow-delay="1.5s">
+            <i class="fas fa-handshake-angle"></i>
+            <h3>Building Plan Approval</h3>
+            <p>Handling all necessary municipal and government approvals, simplifying the complex regulatory
+              process for you.</p>
+            <a href="#" class="service-read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-item-list wow animate__fadeInUp" data-wow-duration="2.0s" data-wow-delay="1.7s">
+            <i class="fas fa-couch"></i>
+            <h3>Interior & Finishing</h3>
+            <p>High-end interior design and finishing work to ensure your completed space is beautiful,
+              functional, and ready to use.</p>
+            <a href="#" class="service-read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Enquiry Button -->
+    <div class="modal-overlay" id="enquiryModal">
+      <div class="modal-content">
+        <div class="modal-header-custom">
+          <h3 class="modal-title">
+            <i class="bi bi-headset me-2"></i>
+            Enquiry Form
+          </h3>
+          <button type="button" class="btn-close" id="closeModalBtn" aria-label="Close">
+            &times;
+          </button>
+        </div>
+
+        <form id="enquiryForm">
+          <div class="modal-body">
+            <div class="success-message text-center py-4 hidden" id="successMessage">
+              <i class="bi bi-check-circle-fill text-success display-4 mb-3"></i>
+              <h4 class="mb-2">Thank You!</h4>
+              <p>We'll contact you shortly</p>
+            </div>
+
+            <div id="formFields">
+              <div class="mb-4">
+                <label for="name" class="form-label">
+                  <i class="bi bi-person me-2"></i>Name
+                </label>
+                <input type="text" class="form-control" id="name" required placeholder="Enter your name" />
+              </div>
+
+              <div class="mb-4">
+                <label for="phone" class="form-label">
+                  <i class="bi bi-telephone me-2"></i>Phone Number
+                </label>
+                <input type="tel" class="form-control" id="phone" required placeholder="Enter 10-digit number"
+                  pattern="[0-9]{10}" maxlength="10" title="Phone number must be exactly 10 digits" />
+              </div>
+
+              <div class="mb-4">
+                <label for="email" class="form-label">
+                  <i class="bi bi-envelope me-2"></i>Email
+                </label>
+                <input type="email" class="form-control" id="email" required placeholder="Enter your email" />
+              </div>
+
+              <div class="mb-4">
+                <label for="location" class="form-label">
+                  <i class="bi bi-geo-alt me-2"></i>Location
+                </label>
+                <input type="text" class="form-control" id="location" required
+                  placeholder="e.g., Chennai, Coimbatore" />
+              </div>
+
+              <div class="mb-3">
+                <label for="message" class="form-label">
+                  <i class="bi bi-chat-left-text me-2"></i>Please explain your requirements
+                </label>
+                <textarea class="form-control" id="message" rows="4" required
+                  placeholder="Tell us about your project or service need."></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer-custom" id="modalFooter">
+            <button type="submit" class="submit-btn" id="submitBtn">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <button class="enquiry-button" id="showModalBtn">
+      <span class="button-text">Enquiry</span>
+      <i class="bi bi-chat-dots"></i>
+    </button>
+
+
+    <footer class="footer-section">
+      <div class="footer-container">
+        <div class="footer-col">
+          <img src="/images/logo/BUILDER2.jpg" alt="Builder Logo">
+          <p>
+            By joining our family, Everyone gains access to a supportive network,
+            lucrative income opportunities, and a promising future.
+          </p>
+          <p>
+            Unity is Power!!! Unity is Strength!!! Lets Unite with
+            <strong>builder</strong> Family to fulfill all your needs
+          </p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Useful links</h4>
+          <div class="footer-links">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Benefits</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">Contacts</a></li>
+              <li><a href="#">Legal</a></li>
+              <li><a href="#">Disclaimer</a></li>
+              <li><a href="#">Refund Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p><strong>builder</strong><br />
+            164, 6th St, Thangal karai, Kumaran Colony,<br />
+            Vadapalani, Chennai, 600026.</p>
+          <p><i class="fas fa-phone-alt"></i> +91-63794 44342 / +91-93423 73853</p>
+          <p><i class="fas fa-envelope"></i> <a href="builder@.co.in">builder@.co.in</a></p>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+
+</body>
+
+</html>

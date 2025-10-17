@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Construction Builders</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/enquiry.css">
+  <link rel="stylesheet" href="/css/footer.css">
+
+  <link rel="stylesheet" href="/css/topbar.css">
+  <link rel="stylesheet" href="/css/services.css">
+
+  <link rel="stylesheet" href="/css/whychoose.css">
+  <link rel="stylesheet" href="/css/infobanner.css">
+  <link rel="stylesheet" href="/css/projects.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <script src="/js/main.js" defer></script>
+</head>
+
+<body>
+
+  <!-- <div class="topbar">
+<div class="container d-flex">
+<div class="top-left-info">
+<ul>
+<li>
+<i class="fas fa-envelope"></i> 
+<a href="mailto:EmailUs@example.com">EmailUs@example.com</a>
+</li>
+<li>
+<i class="fas fa-phone-alt"></i> 
+<a href="tel:+91-989-685-9857">+91-989-685-9857</a>
+</li>
+</ul>
+</div>
+<div class="top-right-social">
+<span>Stay Connected:</span>
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-youtube"></i></a>
+</div>
+</div>
+</div>
+</div> -->
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="/images\logo\BUILDER2.jpg" alt="builder">
+    </div>
+    <button class="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    <ul class="nav-links">
+      <li><a href="/" class="active">Home</a></li>
+      <li><a href="../pages/about.html">About</a></li>
+
+      <li class="dropdown-container">
+        <div class="dropdown">
+          <a href="pages/services.html" class="dropbtn">Services <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-content">
+            <a href="#">Turnkey House Construction</a>
+            <a href="#">Commercial Construction</a>
+            <a href="#">Architectural Designing</a>
+            <a href="#">Structural Designing</a>
+            <a href="#">Building Plan Approval</a>
+          </div>
+        </div>
+      </li>
+
+      <li><a href="/pages/projects.html">Projects</a></li>
+      <li><a href="pages/blog.html">Blog</a></li>
+      <li><a href="/pages/Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+
+    <!-- hero section -->
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Construction You Can Trust</h1>
+        <p>BUILDING THE FUTURE, ONE PROJECT AT A TIME</p>
+        <button class="btn-primary" id="showHeroEnquiryBtn">ENQUIREY</button>
+      </div>
+    </section>
+
+
+
+    <div class="modal-overlay" id="enquiryModal">
+      <div class="modal-content">
+        <div class="modal-header-custom">
+          <h3 class="modal-title">
+            <i class="bi bi-headset me-2"></i>
+            Enquiry Form
+          </h3>
+          <button type="button" class="btn-close" id="closeModalBtn" aria-label="Close">
+            &times;
+          </button>
+        </div>
+
+        <form id="enquiryForm">
+          <div class="modal-body">
+            <div class="success-message text-center py-4 hidden" id="successMessage">
+              <i class="bi bi-check-circle-fill text-success display-4 mb-3"></i>
+              <h4 class="mb-2">Thank You!</h4>
+              <p>We'll contact you shortly</p>
+            </div>
+
+            <div id="formFields">
+              <div class="mb-4">
+                <label for="name" class="form-label">
+                  <i class="bi bi-person me-2"></i>Name
+                </label>
+                <input type="text" class="form-control" id="name" required placeholder="Enter your name" />
+              </div>
+
+              <div class="mb-4">
+                <label for="phone" class="form-label">
+                  <i class="bi bi-telephone me-2"></i>Phone Number
+                </label>
+                <input type="tel" class="form-control" id="phone" required placeholder="Enter 10-digit number"
+                  pattern="[0-9]{10}" maxlength="10" title="Phone number must be exactly 10 digits" />
+              </div>
+
+              <div class="mb-4">
+                <label for="email" class="form-label">
+                  <i class="bi bi-envelope me-2"></i>Email
+                </label>
+                <input type="email" class="form-control" id="email" required placeholder="Enter your email" />
+              </div>
+
+              <div class="mb-4">
+                <label for="location" class="form-label">
+                  <i class="bi bi-geo-alt me-2"></i>Location
+                </label>
+                <input type="text" class="form-control" id="location" required
+                  placeholder="e.g., Chennai, Coimbatore" />
+              </div>
+
+              <div class="mb-3">
+                <label for="message" class="form-label">
+                  <i class="bi bi-chat-left-text me-2"></i>Please explain your requirements
+                </label>
+                <textarea class="form-control" id="message" rows="4" required
+                  placeholder="Tell us about your project or service need."></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer-custom" id="modalFooter">
+            <button type="submit" class="submit-btn" id="submitBtn">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <button class="enquiry-button" id="showModalBtn">
+      <span class="button-text">Enquiry</span>
+      <i class="bi bi-chat-dots"></i>
+    </button>
+
+
+
+
+
+    <!-- service section -->
+
+    <section class="services-section">
+      <div class="services-container">
+        <div class="services-intro">
+          <h2>Build Smart And <br>Effective Construction</h2>
+          <hr class="heading-underline">
+          <p>Mauris a vulputate elit, eu venenatis libero. Suspendisse tempus ligula laoreet, suscipit magna varius.
+            Donec sit amet ipsum vulputate tellus pretium fermentum sit amet nisl. We have a team of dedicated
+            professional.
+          </p>
+          <a class="btn-secondary" href="pages\services.html">VIEW OUR SERVICES</a>
+        </div>
+
+        <div class="services-cards">
+          <div class="service-card">
+            <img src="/images/builderimages/image14.jpg" alt="Industrial Construction" class="card-image">
+            <div class="card-content">
+              <span class="card-divider"></span>
+              <h4>INDUSTRIAL CONSTRUCTION</h4>
+              <p>Donec elit ligula, maximus non euismod vitae, lacinia at sem. Donec sit amet ipsum vulputate tellus
+                pretium fermentum.</p>
+            </div>
+          </div>
+          <div class="service-card">
+            <img src="/images/builderimages/image15.jpg" alt="Residential Construction" class="card-image">
+            <div class="card-content">
+              <span class="card-divider"></span>
+              <h4>RESIDENTIAL CONSTRUCTION</h4>
+              <p>Donec elit ligula, maximus non euismod vitae, lacinia at sem. Donec sit amet ipsum vulputate tellus
+                pretium fermentum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- our profession service -->
+
+    <section class="pro-services-section">
+      <div class="pro-services-container">
+        <div class="pro-services-intro">
+          <h2>OUR PROFESSIONAL SERVICES</h2>
+          <p>Sometimes you want to go where everybody knows your name. And they're always glad you came. Straight r'in'
+            the hills Someday the mountain will.</p>
+        </div>
+
+        <div class="pro-services-content">
+          <div class="service-grid">
+
+            <div class="service-item" data-hover-image="images/builderimages/image1.jpg">
+              <i class="fas fa-hammer"></i>
+              <span>CONSTRUCTION</span>
+            </div>
+
+
+            <div class="service-item " data-hover-image="images/proservices/ARCHITECTURE.jpg">
+              <i class=" fas fa-pencil-ruler"></i>
+              <span>ARCHITECTURE</span>
+            </div>
+
+            <div class="service-item" data-hover-image="images/proservices/PAINTING.jpg">
+              <i class="fas fa-paint-roller"></i>
+              <span>PAINTING</span>
+            </div>
+
+            <div class="service-item" data-hover-image="images/proservices/ELECTRICAL.jpg">
+              <i class="fas fa-bolt"></i>
+              <span>ELECTRICAL</span>
+            </div>
+
+            <div class="service-item" data-hover-image="images/proservices/ROOFING.jpg">
+              <i class="fas fa-home"></i>
+              <span>ROOFING</span>
+            </div>
+
+            <div class="service-item" data-hover-image="images/proservices/PLUMBING.jpg">
+              <i class="fas fa-wrench"></i>
+              <span>PLUMBING</span>
+            </div>
+
+          </div>
+
+          <div class="pro-worker-image-wrapper"></div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- why chouse  us  -->
+
+
+    <section class="why-choose-section">
+      <div class="choose-container">
+        <h2 class="choose-title">WHY CHOOSE <span class="gold-text">BUILDER</span></h2>
+        <hr class="choose-underline">
+
+        <div class="choose-cards">
+          <div class="choose-card">
+            <div class="choose-icon-wrapper">
+              <i class="fas fa-hammer icon-small"></i>
+              <i class="fas fa-plus icon-plus"></i>
+              <i class="fas fa-warehouse icon-large"></i>
+            </div>
+            <h3>TOP BUILDER IN UK</h3>
+            <p>Integer adipiscing elit eget risus sollicitudin pellentesque et non erat. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+
+          <div class="choose-card">
+            <div class="choose-icon-wrapper">
+              <i class="fas fa-home"></i>
+            </div>
+            <h3>DREAM HOUSE</h3>
+            <p>Sollicitudin pellentesque et non erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit eget risus
+              sollicitudin pellentesque et non erat. Integer adipiscing elit eget risus sollicitudin.</p>
+          </div>
+
+          <div class="choose-card">
+            <div class="choose-icon-wrapper">
+              <i class="fas fa-truck-moving"></i>
+            </div>
+            <h3>EXPERIENCED WORKER</h3>
+            <p>Pellentesque et non erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing
+              elit
+              eget risus sollicitudin pellentesque et non erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="info-banner">
+      <div class="info-container">
+        <div class="info-item">
+          <span class="info-number">1</span>
+          <div class="info-content">
+            <h4>FREE CONSULTANCY</h4>
+            <p>Free consultancy from builder</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-number">2</span>
+          <div class="info-content">
+            <h4>BUDGET FRIENDLY</h4>
+            <p>We suite your budget & taste</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-number">3</span>
+          <div class="info-content">
+            <h4>GET A QUOTE</h4>
+            <p>Get a Quote for your project</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Welcome Our Company -->
+
+    <section class="company-welcome-section">
+      <div class="company-content-overlay">
+        <div class="content-text-block">
+          <p class="welcome-text">|| Welcome Our Company</p>
+          <h1>Our 28 Years<br>Working Experience.</h1>
+          <p class="description">
+            Building Expert explains how you can enjoy high-end flooring trends like textured
+            wood and with new laminate flooring. As the general contractor, we first create
+            the highest trust integrity with our clients.
+          </p>
+        </div>
+
+        <div class="stats-and-button">
+          <div class="stats-row">
+            <div class="stat-item">
+              <i class="fa-solid fa-users"></i>
+              <p>Trusted By</p>
+              <strong>4390+</strong>
+            </div>
+            <div class="stat-item">
+              <i class="fa-solid fa-earth-americas"></i>
+              <p>Certification</p>
+              <strong>120+</strong>
+            </div>
+            <div class="stat-item">
+              <i class="fa-solid fa-trophy"></i>
+              <p>Awards</p>
+              <strong>38+</strong>
+            </div>
+          </div>
+
+          <div class="play-button-container">
+            <a href="#" class="play-button">
+              <i class="fa-solid fa-play"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="company-image-side"></div>
+    </section>
+
+    <!-- project section  -->
+
+
+    <section class="featured-works-section">
+      <div class="featured-container">
+        <h2 class="section-title">FEATURED <span class="gold-text">WORKS</span></h2>
+
+        <div class="filter-menu">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="builder">Builder</button>
+          <button class="filter-btn" data-filter="mining">Mining</button>
+          <button class="filter-btn" data-filter="portable">Portable</button>
+          <button class="filter-btn" data-filter="repair">Repair</button>
+        </div>
+
+        <div class="project-grid">
+          <div class="project-item" data-category="mining">
+            <img src="images/builderimages/image8.jpg" alt="Heavy Loader in Mine" class="project-image" />
+            <div class="project-overlay">
+              <div class="overlay-content">
+                <h4>Mining Site Project</h4>
+                <p>Category: Mining</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-item" data-category="builder">
+            <img src="images/builderimages/image7.jpg" alt="Bulldozer" class="project-image" />
+            <div class="project-overlay">
+              <div class="overlay-content">
+                <h4>Road Construction</h4>
+                <p>Category: Builder</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-item" data-category="mining">
+            <img src="images/builderimages/image9.jpg" alt="Excavator" class="project-image" />
+            <div class="project-overlay">
+              <div class="overlay-content">
+                <h4>Quarry Excavation</h4>
+                <p>Category: Mining</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-item" data-category="portable repair">
+            <img src="images/builderimages/image10.jpg" alt="Heavy Machinery" class="project-image" />
+            <div class="project-overlay">
+              <div class="overlay-content">
+                <h4>Heavy Equipment Repair</h4>
+                <p>Category: Repair</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-item" data-category="builder">
+            <img src="images/builderimages/image11.jpg" alt="Digger" class="project-image" />
+            <div class="project-overlay">
+              <div class="overlay-content">
+                <h4>Foundation Work</h4>
+                <p>Category: Builder</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-item" data-category="mining">
+            <img src="images/builderimages/image15.jpg" alt="Trucks and Dozers" class="project-image" />
+            <div class="project-overlay">
+              <div class="overlay-content">
+                <h4>Large Scale Earthworks</h4>
+                <p>Category: Mining</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-item" data-category="portable">
+            <img src="images/builderimages/image6.jpg" alt="Truck with Crane" class="project-image" />
+            <div class="project-overlay">
+              <div class="overlay-content">
+                <h4>Transportation & Lifting</h4>
+                <p>Category: Portable</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-item" data-category="mining">
+            <img src="images/builderimages/image8.jpg" alt="Dump Truck" class="project-image" />
+            <div class="project-overlay">
+              <div class="overlay-content">
+                <h4>Material Hauling</h4>
+                <p>Category: Mining</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- what we do -->
+    <section class="what-we-do">
+      <div class="container">
+        <!-- <p class="tagline">Don't be an architecture of building, be the architecture of life.</p> -->
+        <h2>WHAT WE DO</h2>
+        <div class="underline"></div>
+
+        <div class="slider-arrows">
+          <button class="slider-arrow prev-arrow">&#10094;</button>
+          <button class="slider-arrow next-arrow">&#10095;</button>
+        </div>
+
+        <div class="cards-container">
+          <div class="cards">
+            <div class="card">
+              <div class="card-image">
+                <img src="images/WhatWeDo/renovation.jpg" alt="Renovation" />
+              </div>
+              <div class="card-content">
+                <p class="description">Develop and recreate as well as the ones we provide</p>
+                <h3>RENOVATION</h3>
+                <div class="small-underline"></div>
+                <div class="card-arrow"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <img src="images/WhatWeDo/renovation.jpg" alt="Contracting" />
+              </div>
+              <div class="card-content">
+                <p class="description">Develop and recreate as well as the ones we provide</p>
+                <h3>CONTRACTING</h3>
+                <div class="small-underline"></div>
+                <div class="card-arrow"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <img src="images/WhatWeDo/renovation.jpg" alt="Architecture" />
+              </div>
+              <div class="card-content">
+                <p class="description">Develop and recreate as well as the ones we provide</p>
+                <h3>ARCHITECTURE</h3>
+                <div class="small-underline"></div>
+                <div class="card-arrow"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <img src="images/WhatWeDo/renovation.jpg" alt="Laminating" />
+              </div>
+              <div class="card-content">
+                <p class="description">Develop and recreate as well as the ones we provide</p>
+                <h3>LAMINATING</h3>
+                <div class="small-underline"></div>
+                <div class="card-arrow"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <img src="images/WhatWeDo/renovation.jpg" alt="Restructures" />
+              </div>
+              <div class="card-content">
+                <p class="description">Develop and recreate as well as the ones we provide</p>
+                <h3>RESTRUCTURES</h3>
+                <div class="small-underline"></div>
+                <div class="card-arrow"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <img src="images/WhatWeDo/renovation.jpg" alt="Interior Design" />
+              </div>
+              <div class="card-content">
+                <p class="description">Develop and recreate as well as the ones we provide</p>
+                <h3>INTERIOR DESIGN</h3>
+                <div class="small-underline"></div>
+                <div class="card-arrow"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="slider-controls">
+          <div class="slider-dots">
+            <span class="slider-dot active" data-index="0"></span>
+            <span class="slider-dot" data-index="1"></span>
+            <span class="slider-dot" data-index="2"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- partnership-section -->
+
+
+    <section class="partnership-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="subtitle">Happy to introduce our amazing project partners</p>
+          <h2>PARTNERSHIP</h2>
+          <div class="heading-underline"></div>
+        </div>
+
+        <div class="logo-grid">
+
+          <!-- TATA -->
+          <div class="logo-item">
+            <div class="logo-image-box">
+              <i class="fas fa-industry"></i>
+            </div>
+            <div class="logo-text">
+              <h3>TATA</h3>
+              <p>Corporate Group</p>
+            </div>
+          </div>
+
+          <!-- ADANI -->
+          <div class="logo-item">
+            <div class="logo-image-box">
+              <i class="fas fa-truck-monster"></i>
+            </div>
+            <div class="logo-text">
+              <h3>ADANI</h3>
+              <p>Infrastructure</p>
+            </div>
+          </div>
+
+          <!-- AAVIN -->
+          <div class="logo-item">
+            <div class="logo-image-box">
+              <i class="fas fa-cow"></i>
+            </div>
+            <div class="logo-text">
+              <h3>AAVIN</h3>
+              <p>Dairy Products</p>
+            </div>
+          </div>
+
+          <!-- SUNDARAM -->
+          <div class="logo-item">
+            <div class="logo-image-box">
+              <i class="fas fa-coins"></i>
+            </div>
+            <div class="logo-text">
+              <h3>SUNDARAM</h3>
+              <p>Finance Group</p>
+            </div>
+          </div>
+
+          <!-- ASHOK LEYLAND -->
+          <div class="logo-item">
+            <div class="logo-image-box">
+              <i class="fas fa-truck"></i>
+            </div>
+            <div class="logo-text">
+              <h3>ASHOK LEYLAND</h3>
+              <p>Automotive</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="footer-section">
+    <div class="footer-container">
+      <div class="footer-col">
+        <img src="images/logo/BUILDER2.jpg" alt="Builder Logo">
+        <p>
+          By joining our family, Everyone gains access to a supportive network,
+          lucrative income opportunities, and a promising future.
+        </p>
+        <p>
+          Unity is Power!!! Unity is Strength!!! Lets Unite with
+          <strong>builder</strong> Family to fulfill all your needs
+        </p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Useful links</h4>
+        <div class="footer-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Benefits</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Contacts</a></li>
+            <li><a href="#">Legal</a></li>
+            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><strong>builder</strong><br />
+          164, 6th St, Thangal karai, Kumaran Colony,<br />
+          Vadapalani, Chennai, 600026.</p>
+        <p><i class="fas fa-phone-alt"></i> +91-63794 44342 / +91-93423 73853</p>
+        <p><i class="fas fa-envelope"></i> <a href="builder@.co.in">builder@.co.in</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
