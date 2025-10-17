@@ -476,7 +476,7 @@
 .company-image-side {
   flex: 1;
   background: linear-gradient(to left, rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0.5)),
-              url('/images/builderimages/image5.jpg') 
+              url('../images/builderimages/image5.jpg') 
               no-repeat center center/cover;
   position: relative;
   z-index: 1;

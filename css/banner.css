@@ -1,6 +1,6 @@
 /* PAGE HEADER BANNER ANIMATION ENHANCEMENTS */
 .page-header-banner {
-    background-image: url('/images/builderimages/image5.jpg'); 
+    background-image: url('../images/builderimages/image5.jpg'); 
     background-size: cover;
     background-position: center;
     height: 250px;
